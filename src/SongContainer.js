@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import SongList from './SongList';
 
 class SongContainer extends Component {
   constructor(props){
@@ -28,7 +29,7 @@ class SongContainer extends Component {
   
   render(){
     return (
-      "I'm the songContainer"
+      <SongList songs={this.state.songs}/>
       )
   }
 }
