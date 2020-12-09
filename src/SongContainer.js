@@ -8,7 +8,14 @@ class SongContainer extends Component {
     super(props);
 
     this.state = {
-      songs: []
+      songs: [],
+      songToEdit: {
+        title: '',
+        artist: '',
+        album: '',
+        id: ''
+      },
+      showEditModal: false
     }
   }
   componentDidMount(){
@@ -84,6 +91,16 @@ class SongContainer extends Component {
     console.log(deleteSongResponse, ' response from Flask server');
   };
 
+  openAndEdit = (songFromTheList) => {
+    console.log(songFromTheList, ' songToEdit  ');
+  
+    this.setState({
+      showEditModal: true,
+      songToEdit: {
+        ...songFromTheList,
+      },
+    });
+  };
 
   render(){
     return (
