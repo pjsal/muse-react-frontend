@@ -3,6 +3,7 @@ import axios from 'axios';
 import SongList from './SongList';
 import CreateSongForm from './CreateSongForm';
 import { Grid } from 'semantic-ui-react';
+import EditSongModal from './EditSongModal';
 
 class SongContainer extends Component {
   constructor(props){
